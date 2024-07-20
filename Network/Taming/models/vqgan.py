@@ -2,12 +2,8 @@ import torch
 import torch.nn.functional as F
 import pytorch_lightning as pl
 
-
-from Network.Taming.util import instantiate_from_config
-
 from Network.Taming.modules.diffusionmodules.model import Encoder, Decoder
 from Network.Taming.modules.vqvae.quantize import VectorQuantizer2 as VectorQuantizer
-
 
 class VQModel(pl.LightningModule):
     def __init__(self,
